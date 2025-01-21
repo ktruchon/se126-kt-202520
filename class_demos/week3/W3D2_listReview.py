@@ -52,7 +52,6 @@ avg = []
 
 #process the current student data to find and store each student's test score avg to the avg list 
 for i in range(0, len(test1)):
-
     a = (test1[i] + test2[i] + test3[i]) / 3
     avg.append(a)
     #could also: avg.append((test1[i] + test2[i] + test3[i]) / 3)
