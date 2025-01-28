@@ -2,6 +2,8 @@
 
 #PROGRAM PROMPT: We will continue to work with the class_grades.csv file, as used in the W3D2 demo. We will practice connecting to a file, storing the file data into parallel lists, and creating new data for each student record based on these lists. We will then build a sequential search program which will allow us to find students in the file, and write data regarding them to a newly created file in our repository.
 
+#this program uses the file: class_grades.csv
+
 #--IMPORTS---------------------------------------------------------
 import csv
 #--FUNCTIONS-------------------------------------------------------
