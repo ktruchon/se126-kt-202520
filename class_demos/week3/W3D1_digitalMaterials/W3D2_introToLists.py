@@ -1,16 +1,9 @@
-#NAME:
-#SECTION: SE126.02 or SE126.04
-#LAB: 
-#DATE:
+#W3D2 - Lists Review 
 
-#PROGRAM PROMPT: 
-
-#VARIABLE DICTIONARY:
-
-
+#PROGRAM PROMPT: available W3D2 :]
 
 #--IMPORTS---------------------------------------------------------------
-
+import csv
 
 
 #--FUNCTIONS-------------------------------------------------------------

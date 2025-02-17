@@ -11,7 +11,17 @@ def clear():
         __ = system('clear')
         
 #--INPUT CHECKS-------------------------------------------------
-#simple version with an error trap loop
+
+#A function for checking user's y/n response
+def check(x):
+    '''checker function for lower alpha y & n'''
+    x = x.lower()
+    while x != "y" and x != "n":
+        print("***INVALID***")
+        x = input("Enter your response [y/n]").lower()
+
+#---------------------------------------------
+#simple version with an error trap loop & menu
 ans = input("Would you like to enter the search program? [y/n]").lower()
 
 #validity and user error trap loop
@@ -45,7 +55,7 @@ def swap(i, listName):
 #--DISPLYING from LISTS-------------------------------------------
 #to test the function below, use the 'party.csv' file to populate the lists
 
-def display(x, foundList, records):
+def display(x,records):
     '''
         PARAMETERS:
         -x       signifier for if we are printing a single record or multiple
@@ -53,7 +63,6 @@ def display(x, foundList, records):
 
         -records the length of a list we are going to process through (# of loops/prints)
 
-        -foundlist is a list passed to the function when using sequential searchfor multiple returns - when it is populated, it contains a list of index positions
     '''
     print(f"{'CLASS':8}  {'NAME':10}  {'MEANING':25}  {'CULTURE'}")
     print("----------------------------------------------------------------")
@@ -61,10 +70,10 @@ def display(x, foundList, records):
         #printing one record
         print(f"{class_type[x]:8}  {name[x]:10}  {meaning[x]:25}  {culture[x]}")
 
-    elif foundList:
+    elif found: #the found list is checked from the main code - when it is populated (has data) this statement evals as TRUE / when found is empty, it evals as FALSE
         #printing multiples, based on length stored in 'foundList'
         for i in range(0, records):
-            print(f"{class_type[foundList[i]]:8}  {name[foundList[i]]:10}  {meaning[foundList[i]]:25}  {culture[foundList[i]]}") 
+            print(f"{class_type[found[i]]:8}  {name[found[i]]:10}  {meaning[found[i]]:25}  {culture[found[i]]}") 
     
     else:
         #printing full data, based on length stored in 'records'
