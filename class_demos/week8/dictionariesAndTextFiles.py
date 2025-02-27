@@ -67,13 +67,15 @@ dictList = []
 
 for key in library:
     dictList.append([key,library[key]])
-    #in this 2D list: dictList[x][y]
-    #                   x --> key value
+
 
 for i in range(len(dictList)):
     print(dictList[i]) #just printing to prove it has been stored correctly
 
 for x in range(len(dictList)):
+    print(f"X is {dictList[x]}")
     for y in range(len(dictList[x])):
-        print(f"{dictList[x][y]}")#just printing to visualize [x][y] from line 70 
-
+        print(f"\t{dictList[x][y]} ", end="")#just printing to visualize the new 2D structure fully 
+        #x represents WHICH list inside of dictList we are currently looking at. 
+        #These lists each have 2 values in them: rec0 is the KEY and rec1 is the DEFINITION
+    print()
