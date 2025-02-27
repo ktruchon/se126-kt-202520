@@ -58,21 +58,22 @@ if type(library) is list:
 
 #BINARY SEARCH for LIBRARY NUMBER (dictionary keys)
 #in order to binary search a set of keys you must FIRST ... 
+#       1. Store the dictionary into a 2D list
+#       2. Sort the 2D list by keys
+#       3. Binary search through the 2D list :]
 
-min = 0 
-max = len(library_nums) - 1
-mid = int((min + max) / 2)
+#       1. Store the dictionary into a 2D list
+dictList = []
 
-while min < max and search != library_nums[mid]:
-    if search < library_nums[mid]:
-        max = mid - 1
-    else:
-        min = mid + 1
-    mid = int((min + max) / 2)
+for key in library:
+    dictList.append([key,library[key]])
+    #in this 2D list: dictList[x][y]
+    #                   x --> key value
 
-if search == library_nums[mid]:
-    print(f"We found your search for {search}, see details below: ")
-    print(f"\nKEY:{library_nums[mid]:6}\tTITLE:{library[library_nums[mid]]}")
-else:
-    print(f"We could not complete your search for {search} :[")
-    
+for i in range(len(dictList)):
+    print(dictList[i]) #just printing to prove it has been stored correctly
+
+for x in range(len(dictList)):
+    for y in range(len(dictList[x])):
+        print(f"{dictList[x][y]}")#just printing to visualize [x][y] from line 70 
+
